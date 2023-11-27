@@ -46,8 +46,11 @@ export const getSortedTodos = (
     });
 
     return coppiedTodos
-      .map((todo) => ({ ...todo, [sortedParam]: new Date(todo[sortedParam]) }))
-      .sort((a, b) => a[sortedParam].getTime() - b[sortedParam].getTime())
+      .sort(
+        (a, b) =>
+          new Date(a[sortedParam]).getTime() -
+          new Date(b[sortedParam]).getTime()
+      )
       .map((todo) => ({
         ...todo,
         [sortedParam]: getValidStringDate(todo[sortedParam].toString()),

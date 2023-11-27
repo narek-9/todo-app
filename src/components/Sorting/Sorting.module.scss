@@ -1,0 +1,63 @@
+.Sorting {
+  margin: 40px 0;
+
+  &__searchInput {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    outline: none;
+    border: 1px solid #8758ff;
+    border-radius: 8px;
+    color: #fff;
+    background: none;
+
+    &::placeholder {
+      color: #ffffff4d;
+    }
+  }
+
+  &__selects {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+
+    select {
+      width: 25%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      outline: none;
+      font-size: 18px;
+      cursor: pointer;
+      color: #fff;
+      background-color: transparent;
+
+      option {
+        font-size: 16px;
+        padding: 12px;
+        color: black;
+      }
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    &__searchInput {
+      width: 50%;
+      margin: auto;
+    }
+
+    &__selects {
+      width: 50%;
+      margin: 20px auto;
+
+      select {
+        width: 35%;
+        font-size: 10px;
+
+        option {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.Button {
+  min-width: 75px;
+  max-width: 125px;
+  margin-top: 8px;
+  margin-right: 5px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  word-break: break-all;
+  cursor: pointer;
+  color: #fff;
+  background: #331188;
+
+  &__disabled {
+    opacity: 0.5;
+    cursor: no-drop;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,25 @@
+.Input {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  outline: none;
+  border: 1px solid #8758ff;
+  border-radius: 8px;
+  color: #fff;
+  background: transparent;
+
+  &::placeholder {
+    color: #ffffff4d;
+  }
+
+  &[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+  }
+
+  @media only screen and (max-width: 700px) {
+    &[type="datetime-local"] {
+      font-size: 10px;
+    }
+  }
+}

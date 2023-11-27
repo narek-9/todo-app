@@ -1,0 +1,50 @@
+.TodoForm {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 calc(50% - 20px);
+  margin-bottom: 8px;
+  padding: 25px;
+  border-radius: 8px;
+  background-color: #4a16cf;
+
+  &__label {
+    margin: 10px 0;
+    color: #fff;
+
+    &__endDateWrapper {
+      position: relative;
+
+      &__clearBtn {
+        position: absolute;
+        top: 28%;
+        right: 8%;
+        border: none;
+        font-size: 12px;
+        cursor: pointer;
+        color: #fff;
+        background-color: transparent;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+  @media screen and (max-width: 700px) {
+    &__label__endDateWrapper__clearBtn {
+      top: 20%;
+      right: 10%;
+    }
+  }
+}
+
+.invalidInput {
+  border: 2px solid #ff5555;
+  box-shadow: 0 0 5px rgba(255, 85, 85, 0.5);
+}
+
+.redText {
+  color: red;
+}

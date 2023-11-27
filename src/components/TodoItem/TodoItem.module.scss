@@ -1,0 +1,94 @@
+.Todo {
+  display: flex;
+  flex-direction: column;
+  min-height: 150px;
+  flex: 1 1 calc(50% - 20px);
+  padding: 15px;
+  border-radius: 8px;
+  color: #fff;
+  background-color: #4a16cf;
+
+  &__completed {
+    text-decoration: line-through;
+    text-decoration-color: #c5aeff;
+    transition: color 0.5s ease, text-decoration 0.5s ease;
+    color: #c5aeff;
+  }
+
+  &__incompleted {
+    text-decoration: none;
+    text-decoration-color: transparent;
+    transition: color 0.5s ease, text-decoration 0.5s ease;
+    color: #fff;
+  }
+
+  &.deleting {
+    opacity: 0; 
+    transition: opacity 0.5s ease; 
+  }
+
+  &__title {
+    position: relative;
+    margin: 10px 0;
+    text-align: center;
+    word-break: break-all;
+
+    &__img {
+      width: 35px;
+      height: 35px;
+      position: absolute;
+      top: -22px;
+      left: -10px;
+      cursor: pointer;
+      transition: transform 0.7s ease;
+
+      &.turned {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__data {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+
+    &.visible {
+      max-height: 500px;
+    }
+
+    &__description {
+      max-height: 300px;
+      margin: 10px 0;
+      padding: 10px 15px;
+      border-radius: 8px;
+      word-break: break-all;
+      background: #8758ff;
+    }
+
+    &__dates {
+      margin: 10px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    gap: 10px;
+  }
+
+  @media (max-width: 700px) {
+    flex: 1 1 calc(100% - 20px);
+    max-width: 100%;
+  }
+}
+
+.overflowScroll {
+  overflow: scroll;
+}
